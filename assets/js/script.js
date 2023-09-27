@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         "Toque Físico"
     ];
 
-
     const questionContainer = document.getElementById('questionContainer');
     const resultContainer = document.getElementById('resultContainer');
     const questionText = document.getElementById('questionText');
