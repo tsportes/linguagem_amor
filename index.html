@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste das Linguagens do Amor</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="question-container" id="questionContainer">
+        <p id="questionText">Pergunta aqui</p>
+        <div class="slider-container">
+            <span id="optionALabel">a)</span>
+            <input type="range" min="-5" max="5" step="1" value="0" id="answerSlider">
+            <span id="optionBLabel">b)</span>
+        </div>
+        <button id="nextButton">Próxima</button>
+    </div>
+    <div class="result-container" id="resultContainer" style="display: none;">
+        <canvas id="loveLanguagesChart"></canvas>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
