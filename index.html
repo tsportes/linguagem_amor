@@ -5,22 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste das Linguagens do Amor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="assets/img/favico.png" type="image/png">
 </head>
 
 <body>
+    <datalist id="answerScores">
+        <option value="-5"></option>
+        <option value="-4"></option>
+        <option value="-3"></option>
+        <option value="-2"></option>
+        <option value="-1"></option>
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+    </datalist>
     <div class="question-container" id="questionContainer">
         <p id="questionText">Pergunta aqui</p>
         <div class="slider-container">
-            <span id="optionALabel">a)</span>
-            <input type="range" min="-5" max="5" step="1" value="0" id="answerSlider">
-            <span id="optionBLabel">b)</span>
+            <span class="opcoes" id="optionALabel"></span>
+            <input type="range" min="-5" max="5" step="1" value="0" id="answerSlider" list="answerScores">
+            <span class="opcoes" id="optionBLabel"></span>
         </div>
-        <button id="nextButton">Próxima</button>
+        <div class="labelDica">
+            <label for="answerSlider">Preencha conforme sua auto percepção</label>
+        </div>
+        <div class="botao">
+            <button type="button" id="nextButton">Próxima questão</button>
+        </div>
     </div>
     <div class="result-container" id="resultContainer" style="display: none;">
         <canvas id="loveLanguagesChart"></canvas>
+        <div class="botao">
+            <button type="button" id="refreshPage">Reiniciar</button>
+        </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

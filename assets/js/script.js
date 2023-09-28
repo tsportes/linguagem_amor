@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const questionText = document.getElementById('questionText');
     const answerSlider = document.getElementById('answerSlider');
     const nextButton = document.getElementById('nextButton');
+    const refreshPage = document.getElementById('refreshPage');
     const optionALabel = document.getElementById('optionALabel');
     const optionBLabel = document.getElementById('optionBLabel');
 
@@ -109,6 +110,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     questionText.textContent = questions[currentQuestionIndex];
     optionALabel.textContent = optionsA[currentQuestionIndex];
     optionBLabel.textContent = optionsB[currentQuestionIndex];
+
+    refreshPage.addEventListener('click', function() {
+        location.reload()
+    });
 
     nextButton.addEventListener('click', function() {
 
@@ -127,7 +132,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             optionALabel.textContent = optionsA[currentQuestionIndex];
             optionBLabel.textContent = optionsB[currentQuestionIndex];
             questionText.textContent = questions[currentQuestionIndex];
-            answerSlider.value = 0.5; // Reset para o meio
+            answerSlider.value = 0; // Reset para o meio
         } else {
             questionContainer.style.display = 'none';
             resultContainer.style.display = 'block';
